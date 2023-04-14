@@ -8,8 +8,34 @@
 		{
 			"name": "createNote",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer_eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpemkiLCJyb2xlcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjgwODkwMjUwLCJleHAiOjE2ODA4OTM4NTB9.3r1_41Th8nlMBFRPbxRoKWvkVX6PcdoZUnCOF0YrVTA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"Content izi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/note",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"note"
+					]
+				}
 			},
 			"response": []
 		},
@@ -17,31 +43,108 @@
 			"name": "getAllNotes",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/note",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"note"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "login",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\":\"izi\",\r\n    \"password\":\"izipassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "register",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\":\"izi2\",\r\n    \"password\":\"izipassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"register"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "like",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer_eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpemkiLCJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTY4MDg4NTQ2MSwiZXhwIjoxNjgwODg5MDYxfQ.HQgMKfXF8w7Hk6skksJ__Zg-NlIr-_7Poo17YsihghQ",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\":\"090c3a76-0e02-46fe-b83e-acc679813d1d\",\r\n    \"note\":\"672290cc-c87a-4bcc-bc21-be7135eda26c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/like",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"like"
+					]
+				}
 			},
 			"response": []
 		},
@@ -49,23 +152,86 @@
 			"name": "getNoteById",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/note/c0ab4f11-9fe8-4104-b544-1b2c533dc83e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"note",
+						"c0ab4f11-9fe8-4104-b544-1b2c533dc83e"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "updateNote",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer_eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpemkiLCJyb2xlcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjgwODkwNTcwLCJleHAiOjE2ODA4OTQxNzB9.32G60FO2Ip-Za-Xanj95_F3Wb8tI2i4tj0npwiLWD8g",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"just izi -> to izi2 -> izi again\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/note/c0ab4f11-9fe8-4104-b544-1b2c533dc83e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"note",
+						"c0ab4f11-9fe8-4104-b544-1b2c533dc83e"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "deleteNote",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer_eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpemkiLCJyb2xlcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjgwODkwNTcwLCJleHAiOjE2ODA4OTQxNzB9.32G60FO2Ip-Za-Xanj95_F3Wb8tI2i4tj0npwiLWD8g",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/note/c0ab4f11-9fe8-4104-b544-1b2c533dc83e?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"note",
+						"c0ab4f11-9fe8-4104-b544-1b2c533dc83e"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
 			},
 			"response": []
 		}
